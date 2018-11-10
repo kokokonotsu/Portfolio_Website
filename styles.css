@@ -9,6 +9,7 @@
     --navHoverUnderlineColor: #f1f1f1;
     --fontColor: #2c2c2c;
     --cardColor: #a9c8f9;
+    --collapsibleColor: #8ab7ff;
 }
 /* Root End */
 /* Html Start */
@@ -112,27 +113,44 @@ main .column{
     padding: 10px;
 }
 main .main{
+    box-sizing: border-box;
     width: 75%;
 }
 main .side{
+    
     width: 25%;
 }
-.main-card{
+.collapsible{
     background-color: var(--cardColor);
+    outline: none;
+    width: 100%;
+    margin: 10px 0 10px 0;
+    border: none;
+    transition: color 0.3s;
+}
+.collapsible:hover{
+    color: white;
+}
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: var(--cardColor);
+  }
+.main-card, .side-card{
+    background-color: var(--cardColor);
+    box-sizing: border-box;
 }
 .main-card *, .side-card *{
     padding: 5px;
 }
 .main-card p, .side-card p{
-    margin-bottom: 0;
+    margin: 0;
 }
 .main-card .title, .side-card .title{
     margin-top: 0;
     padding-top: 5px;
     padding-inline-start: 15px;
-}
-.side-card{
-    background-color: var(--cardColor);
 }
 main .row:after {
     content: "";
