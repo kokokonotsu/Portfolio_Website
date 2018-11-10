@@ -113,37 +113,45 @@ main .column{
     padding: 10px;
 }
 main .main{
-    box-sizing: border-box;
     width: 75%;
 }
 main .side{
-    
     width: 25%;
 }
 .collapsible{
     background-color: var(--cardColor);
     outline: none;
     width: 100%;
-    margin: 10px 0 10px 0;
+    margin: 10px 0 0 0;
     border: none;
     transition: all 0.3s;
+    padding: 5px;
+}
+.collapsiblePrompt{
+    background-color: var(--collapsibleColor);
+    padding: 5px;
+    transition: all 0.3s ease;
 }
 .collapsiblePrompt:hover{
-    background-color: white;
+    color: white;
 }
 .content {
-    padding: 0 18px;
+    padding: 0;
     max-height: 0;
     overflow: hidden;
     background-color: var(--cardColor);
     transition: max-height 0.5s ease;
   }
+.content p{
+    padding: 5px;
+}
 .main-card, .side-card{
     background-color: var(--cardColor);
     box-sizing: border-box;
+    border-radius: 3px;
 }
 .main-card *, .side-card *{
-    padding: 5px;
+    
 }
 .main-card p, .side-card p{
     margin: 0;
