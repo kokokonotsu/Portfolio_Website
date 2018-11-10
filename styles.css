@@ -1,3 +1,4 @@
+/* Root Start */
 :root{
     --headerColor: #3674d8;
     --bodyColor: #e5e5e5;
@@ -6,12 +7,16 @@
     --fontColor: #212121;
     --cardColor: #a9c8f9;
 }
+/* Root End */
+/* Html Start */
 html{
     width: 100%;
     height: 100%;
     color: var(--fontColor);
     background-color: var(--bodyColor);
 }
+/* Html End */
+/* Body Start */
 body{
     display: block;
     box-sizing: border-box;
@@ -19,6 +24,8 @@ body{
     width: 100%;
     height: 100%;
 }
+/* Body End */
+/* Header Start */
 header{
     display: flex;
     width: 100%;
@@ -28,6 +35,8 @@ header{
     flex-direction: column;
     justify-content: center;
 }
+/* Header End */
+/* Nav Start */
 nav{
     width: 100%;
     height: 5%;
@@ -55,6 +64,8 @@ nav li{
     text-align: center;
     font-size: 1.2em;
 }
+/* Nav End */
+/* Main Start */
 main{
     width: 100%;
     height: 75%;
@@ -86,11 +97,15 @@ main .row:after {
     display: table;
     clear: both;
 }
+/* Main End */
+/* Footer Start */
 footer{
     width: 100%;
     height: 10%;
     background-color: var(--footerColor);
 }
+/* Footer End */
+/* Media Queries Start */
 @media screen and (max-width: 700px){
     main .main{
         width: 100%;
@@ -99,3 +114,4 @@ footer{
         width: 100%;
     }
 }
+/* Media Queries End */
