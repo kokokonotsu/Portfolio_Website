@@ -126,16 +126,17 @@ main .side{
     width: 100%;
     margin: 10px 0 10px 0;
     border: none;
-    transition: color 0.3s;
+    transition: all 0.3s;
 }
-.collapsible:hover{
-    color: white;
+.collapsiblePrompt:hover{
+    background-color: white;
 }
 .content {
     padding: 0 18px;
-    display: none;
+    max-height: 0;
     overflow: hidden;
     background-color: var(--cardColor);
+    transition: max-height 0.5s ease;
   }
 .main-card, .side-card{
     background-color: var(--cardColor);
