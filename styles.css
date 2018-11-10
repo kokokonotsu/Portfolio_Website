@@ -1,6 +1,7 @@
 /* Root Start */
 :root{
     --headerColor: #194fa5;
+    --headerH1Color: #e5e5e5;
     --bodyColor: #e5e5e5;
     --footerColor: #333333;
     --navColor: #C6C6C6;
@@ -17,6 +18,7 @@ html{
     color: var(--fontColor);
     background-color: var(--bodyColor);
     font-size: 16px;
+    font-family: "Open Sans", cursive;
 }
 /* Html End */
 /* Body Start */
@@ -42,12 +44,13 @@ header h1{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: 'Kumar One Outline', cursive;
+    font-family: 'Lobster', cursive;
     margin: 0;
-    padding: 5px;
+    font-size: 3em;
+    padding: 0px;
     height: 100%;
     width: 100%;
-    color: whitesmoke;
+    color: var(--headerH1Color);
 }
 /* Header End */
 /* Nav Start */
@@ -117,8 +120,16 @@ main .side{
 .main-card{
     background-color: var(--cardColor);
 }
-.main-card h2, .side-card h2{
+.main-card *, .side-card *{
+    padding: 5px;
+}
+.main-card p, .side-card p{
+    margin-bottom: 0;
+}
+.main-card .title, .side-card .title{
     margin-top: 0;
+    padding-top: 5px;
+    padding-inline-start: 15px;
 }
 .side-card{
     background-color: var(--cardColor);
