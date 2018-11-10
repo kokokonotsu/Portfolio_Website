@@ -1,12 +1,12 @@
 /* Root Start */
 :root{
-    --headerColor: #3674d8;
+    --headerColor: #16448d;
     --bodyColor: #e5e5e5;
     --footerColor: #333333;
     --navColor: #C6C6C6;
     --navHoverColor: #9C9C9C;
     --navHoverUnderlineColor: #f1f1f1;
-    --fontColor: #212121;
+    --fontColor: #2c2c2c;
     --cardColor: #a9c8f9;
 }
 /* Root End */
@@ -16,6 +16,7 @@ html{
     height: 100%;
     color: var(--fontColor);
     background-color: var(--bodyColor);
+    font-size: 16px;
 }
 /* Html End */
 /* Body Start */
@@ -36,6 +37,17 @@ header{
     text-align: center;
     flex-direction: column;
     justify-content: center;
+}
+header h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Kumar One Outline', cursive;
+    margin: 0;
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+    color: whitesmoke;
 }
 /* Header End */
 /* Nav Start */
