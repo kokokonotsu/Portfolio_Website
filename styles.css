@@ -4,6 +4,8 @@
     --bodyColor: #e5e5e5;
     --footerColor: #333333;
     --navColor: #C6C6C6;
+    --navHoverColor: #9C9C9C;
+    --navHoverUnderlineColor: #f1f1f1;
     --fontColor: #212121;
     --cardColor: #a9c8f9;
 }
@@ -58,11 +60,28 @@ nav a{
     color: var(--fontColor);
     justify-content: center;
     padding: 5px;
+    transition: all ease 0.3s;
+    
+}
+nav a:hover{
+    background-color: var(--navHoverColor);
+    color: var(--navHoverUnderlineColor);
 }
 nav li{
-    display: inline-block;
+    display: inline;
     text-align: center;
     font-size: 1.2em;
+}
+nav li::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: var(--navHoverUnderlineColor);
+    transition: width 0.3s;
+}
+nav a:hover li::after{
+    width: 100%;
 }
 /* Nav End */
 /* Main Start */
