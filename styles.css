@@ -1,0 +1,101 @@
+:root{
+    --headerColor: #3674d8;
+    --bodyColor: #e5e5e5;
+    --footerColor: #333333;
+    --navColor: #C6C6C6;
+    --fontColor: #212121;
+    --cardColor: #a9c8f9;
+}
+html{
+    width: 100%;
+    height: 100%;
+    color: var(--fontColor);
+    background-color: var(--bodyColor);
+}
+body{
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+header{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    background-color: var(--headerColor);
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+nav{
+    width: 100%;
+    height: 5%;
+    background-color: var(--navColor);
+}
+nav .navList{
+    list-style-type: none;
+    display: flex;
+    padding-inline-start: 0;
+    margin: 0;
+    height: 100%;
+    justify-content: flex-start;
+    justify-items: baseline;
+}
+nav a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--fontColor);
+    justify-content: center;
+    padding: 5px;
+}
+nav li{
+    display: inline-block;
+    text-align: center;
+    font-size: 1.2em;
+}
+main{
+    width: 100%;
+    height: 75%;
+    background-color: var(--bodyColor);
+}
+
+main .column{
+    box-sizing: border-box;
+    float: left;
+    padding: 10px;
+}
+main .main{
+    width: 75%;
+}
+main .side{
+    width: 25%;
+}
+.main-card{
+    background-color: var(--cardColor);
+}
+.main-card h2, .side-card h2{
+    margin-top: 0;
+}
+.side-card{
+    background-color: var(--cardColor);
+}
+main .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+footer{
+    width: 100%;
+    height: 10%;
+    background-color: var(--footerColor);
+}
+@media screen and (max-width: 700px){
+    main .main{
+        width: 100%;
+    }
+    main .side{
+        width: 100%;
+    }
+}
