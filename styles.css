@@ -113,9 +113,11 @@ main .column{
     padding: 10px;
 }
 main .main{
+    float: left;
     width: 75%;
 }
 main .side{
+    float: left;
     width: 25%;
 }
 .collapsible{
