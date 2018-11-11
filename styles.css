@@ -132,7 +132,7 @@ main .side{
 }
 .collapsiblePrompt{
     background-color: var(--collapsibleColor);
-    padding: 5px;
+    padding: 10px 5px;
     transition: all 0.3s ease;
 }
 .collapsiblePrompt:hover{
@@ -154,9 +154,9 @@ main .side{
     border-radius: 3px;
     margin-bottom: 1vh;
 }
-.main-card *, .side-card *{
+/* .main-card *, .side-card *{
     
-}
+} */
 .main-card p, .side-card p{
     margin: 0;
 }
@@ -175,16 +175,25 @@ main .row:after {
 footer{
     width: 100%;
     height: 10%;
+    position: absolute;
+    bottom: 0;
     background-color: var(--footerColor);
 }
 /* Footer End */
 /* Media Queries Start */
-@media screen and (max-width: 700px){
+@media screen and (max-width: 768px){
     main .main{
         width: 100%;
+        padding-bottom: 0;
     }
     main .side{
         width: 100%;
+        padding-top: 0;
+    }
+}
+@media screen and (max-width: 425px){
+    main .row{
+        margin-left: 50px;
     }
 }
 /* Media Queries End */
