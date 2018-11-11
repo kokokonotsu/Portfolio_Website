@@ -135,6 +135,9 @@ main .side{
     padding: 10px 5px;
     transition: all 0.3s ease;
 }
+.collapsiblePrompt i{
+    padding-left: 5px;
+}
 .collapsiblePrompt:hover{
     color: white;
 }

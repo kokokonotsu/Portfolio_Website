@@ -6,12 +6,15 @@ function collapsible(){
     //Run each index of the 'collapsible' collection of elements through a for loop//
     for(i = 0; i < collapsible.length; i++){
         //Add Event Listeners to all 'collapsible' elements//
-        collapsible[i].children[0].addEventListener("click", function(){
+        var collapsiblePrompt = collapsible[i].children[0];
+        collapsiblePrompt.addEventListener("click", function(){
             var content = this.nextElementSibling;
             if(content.style.maxHeight){
                 content.style.maxHeight = null;
+                this.innerHTML = 'Show More<i class="fas fa-angle-double-down">'
             } else {
                 content.style.maxHeight = content.scrollHeight +"px";
+                this.innerHTML = 'Show Less<i class="fas fa-angle-double-up"></i>';
             }
         })
     }
