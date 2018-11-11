@@ -58,10 +58,65 @@ function media(){
             }
         }
     }
-console.log("I am running");
 var screen = window.matchMedia("(max-width: 425px)");
 matchScreen(screen);
 screen.addListener(matchScreen);
 }
+
+function makeCircles() {
+    const mainCard = document.querySelectorAll(".main-card");
+    const sideCard = document.querySelectorAll(".side-card");
+    
+    for(i = 0; i < mainCard.length; i++){
+        var mainCardChildren = mainCard[i].children;
+        var newChild = '<i class="fas fa-lock"></i>';
+        for(k = 0; k < mainCardChildren.length; k++){
+            mainCardChildren[k].classList.add("no-display");
+        }
+        mainCard[i].classList.add("main-circle");
+        mainCard[i].insertAdjacentHTML("afterbegin", newChild);
+        mainCard[i].addEventListener("click", transformCircles);
+        console.log("I am running");
+    }
+    for(j = 0; j < sideCard.length; j++){
+        var sideCardChildren = sideCard[j].children;
+        for(l = 0; l < sideCardChildren.length; l++){
+            sideCardChildren[l].classList.add("no-display");
+        }
+        sideCard[j].classList.add("side-circle");
+        sideCard[j].insertAdjacentHTML("afterbegin", newChild);
+        sideCard[j].addEventListener("click", transformCircles);
+        console.log("I am running");
+    }
+}
+function transformCircles(){
+    const mainCard = document.querySelectorAll(".main-card");
+    const sideCard = document.querySelectorAll(".side-card");
+    for(i = 0; i < mainCard.length; i++){
+        var mainCardChildren = mainCard[i].children;
+        if(mainCard[i].classList.contains("main-circle")){
+            for(k = 0; k < mainCardChildren.length; k++){
+                mainCardChildren[k].classList.remove("no-display");
+                mainCard[i].classList.remove("main-circle"); 
+                mainCard[i].firstElementChild.innerHTML = '<i class="fas fa-lock-open"></i>';
+                console.log("I am running");
+            }
+            break;
+        }
+    }
+    for(j = 0; j < sideCard.length; j++){
+        var sideCardChildren = sideCard[j].children;
+        if(sideCard[j].classList.contains("side-circle")){
+            for(l = 0; l < sideCardChildren.length; l++){
+                sideCardChildren[l].classList.remove("no-display");
+                sideCard[j].classList.remove("side-circle");
+                sideCard[j].firstElementChild = '<i class="fas fa-lock-open"></i>';
+                console.log("I am running");
+            }
+            break;
+        }   
+    }
+}
 window.addEventListener("load", collapsible());
 window.addEventListener("load", media());
+window.addEventListener("load", makeCircles());

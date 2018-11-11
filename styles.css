@@ -173,6 +173,29 @@ main .row:after {
     display: table;
     clear: both;
 }
+.main-circle{
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+}
+.side-circle{
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+}
+.no-display{
+    display: none;
+}
 /* Main End */
 /* Footer Start */
 footer{
