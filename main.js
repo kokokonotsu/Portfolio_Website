@@ -37,11 +37,26 @@ function media(){
                 navLinks[i].children[0].innerHTML = navIconArray[i];
             }
         } else{
-            document.body.style.backgroundColor = "white";
+            var nav = document.querySelector("nav");
+            var navList = document.getElementById("navList");
+            var navLinks = nav.querySelectorAll("a");
+            var navLinkArray = ["Home", "About", "Archive", "Contact"];
+            nav.style.position = "initial";
+            nav.style.width = "100%";
+            nav.style.height= "5%";
+            navList.style.display = "flex";
+            navList.style.flexDirection = "row";
+            navList.style.justifyItems = "flex-start";
+            for(i = 0; i < navLinks.length; i++){
+                navLinks[i].style.padding = "5px";
+                navLinks[i].style.fontSize = "1rem";
+                navLinks[i].children[0].style.display = "inline";
+                navLinks[i].children[0].innerHTML = navLinkArray[i];
+            }
         }
     }
 console.log("I am running");
-var screen = window.matchMedia("(max-width: 700px)");
+var screen = window.matchMedia("(max-width: 425px)");
 matchScreen(screen);
 screen.addListener(matchScreen);
 }
