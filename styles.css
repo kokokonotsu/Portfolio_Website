@@ -68,6 +68,7 @@ nav .navList{
     height: 100%;
     justify-content: flex-start;
     justify-items: baseline;
+    overflow: hidden;
 }
 nav a{
     display: flex;
@@ -92,7 +93,7 @@ nav li::after{
     content: "";
     display: block;
     width: 0;
-    height: 1px;
+    height: 1.5px;
     background-color: var(--navHoverUnderlineColor);
     transition: width 0.3s;
 }
@@ -151,6 +152,7 @@ main .side{
     background-color: var(--cardColor);
     box-sizing: border-box;
     border-radius: 3px;
+    margin-bottom: 1vh;
 }
 .main-card *, .side-card *{
     
