@@ -105,6 +105,14 @@ function transformCircles(e){
         console.log("I am running");
     if(target.classList.contains("side-card")){
         var sideCardChildren = target.children;
+        if (target.firstElementChild.classList.contains("fas fa-lock")){
+            target.removeChild(target.firstElementChild);
+            target.insertAdjacentHTML("afterbegin", targetUnlock);
+        } else
+        if(target.firstElementChild.classList.contains("fas fa-lock-open")){
+            target.removeChild(target.firstElementChild);
+            target.insertAdjacentHTML("afterbegin", targetLock);            
+        }
         for(i = 0; i < sideCardChildren.length; i++){
             if(sideCardChildren[i].classList.contains("no-display"))
             {
@@ -117,18 +125,29 @@ function transformCircles(e){
             target.firstElementChild.classList.remove("no-display");
         }
         if(target.classList.contains("side-circle")){
-            target.classList.toggle("side-circle");
+            target.style.borderRadius = "3px";
+            target.style.height = "initial";
+            target.style.width = "100%";
+            target.style.display = "block";
+            target.style.flexDirection = "column";
+            target.style.justifyContent = "center";
+            target.style.textAlign = "initial";
+            target.style.fontSize = "initial";
+            target.style.transition = "all 0.3s ease";
+            target.classList.remove("side-circle");
         } else {
-            target.classList.toggle("side-circle");
+            target.style.borderRadius = "50%";
+            target.style.height = "70px";
+            target.style.width = "70px";
+            target.style.display = "flex";
+            target.style.flexDirection = "column";
+            target.style.justifyContent = "center";
+            target.style.textAlign = "center";
+            target.style.fontSize = "2rem";
+            target.style.transition = "all 0.3s ease";
+            target.classList.add("side-circle");
         }
-        if (target.firstElementChild.classList.contains("fas fa-lock")){
-            target.removeChild(target.firstElementChild);
-            target.insertAdjacentHTML("afterbegin", targetUnlock);
-        } else
-        if(target.firstElementChild.classList.contains("fas fa-lock-open")){
-            target.removeChild(target.firstElementChild);
-            target.insertAdjacentHTML("afterbegin", targetLock);            
-        }
+        
     }
 }
 window.addEventListener("load", makeCircles());
