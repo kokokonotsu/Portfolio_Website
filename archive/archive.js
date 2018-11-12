@@ -80,15 +80,19 @@ function transformCircles(e){
         }
         if(target.classList.contains("main-circle")){
             target.style.borderRadius = "3px";
-            target.style.height = "initial";
-            target.style.width = "100%";
             target.style.display = "block";
-            target.style.flexDirection = "column";
-            target.style.justifyContent = "center";
+            function setHeight(){
+            target.style.height = "initial";
+            }
+            function setWidth(){
+            target.style.width = "100%";
+            }
             target.style.textAlign = "initial";
             target.style.fontSize = "initial";
             target.style.transition = "all 0.3s ease";
             target.classList.remove("main-circle");
+            window.setTimeout(console.log("Setting Height Timer"), 2000, setHeight());
+            window.setTimeout(console.log("Setting Width Timer"), 2000, setWidth());
         } else {
             target.style.borderRadius = "50%";
             target.style.height = "70px";
