@@ -177,7 +177,7 @@ main .row:after {
     display: table;
     clear: both;
 }
-.main-circle{
+/* .main-circle{
     border-radius: 50%;
     height: 70px;
     width: 70px;
@@ -198,7 +198,7 @@ main .row:after {
     text-align: center;
     font-size: 2rem;
     transition: all 0.3s ease;
-}
+} */
 .no-display{
     display: none;
     width: 0;

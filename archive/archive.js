@@ -9,6 +9,15 @@ function makeCircles() {
         for(k = 0; k < mainCardChildren.length; k++){
             mainCardChildren[k].classList.add("no-display");
         }
+        mainCard[i].style.borderRadius = "50%";
+        mainCard[i].style.height = "70px";
+        mainCard[i].style.width = "70px";
+        mainCard[i].style.display = "flex";
+        mainCard[i].style.flexDirection = "column";
+        mainCard[i].style.justifyContent = "center";
+        mainCard[i].style.textAlign = "center";
+        mainCard[i].style.fontSize = "2rem";
+        mainCard[i].style.transition = "all 0.3s ease";
         mainCard[i].classList.add("main-circle");
         mainCard[i].insertAdjacentHTML("afterbegin", newChild);
         console.log("I am running");
@@ -23,6 +32,15 @@ function makeCircles() {
         for(l = 0; l < sideCardChildren.length; l++){
             sideCardChildren[l].classList.add("no-display");
         }
+        sideCard[j].style.borderRadius = "50%";
+        sideCard[j].style.height = "70px";
+        sideCard[j].style.width = "70px";
+        sideCard[j].style.display = "flex";
+        sideCard[j].style.flexDirection = "column";
+        sideCard[j].style.justifyContent = "center";
+        sideCard[j].style.textAlign = "center";
+        sideCard[j].style.fontSize = "2rem";
+        sideCard[j].style.transition = "all 0.3s ease";
         sideCard[j].classList.add("side-circle");
         sideCard[j].insertAdjacentHTML("afterbegin", newChild);
         console.log("I am running");
@@ -47,7 +65,7 @@ function transformCircles(e){
         if(mainCardChildren[0].classList.contains("fas fa-lock-open")){
             target.removeChild(target.firstElementChild);
             target.insertAdjacentHTML("afterbegin", targetLock);
-            console.log("Open-Lock Deleted");      
+            console.log("Open-Lock Deleted");
         }
         for(i = 0; i < mainCardChildren.length; i++){
             if(mainCardChildren[i].classList.contains("no-display"))
@@ -61,9 +79,27 @@ function transformCircles(e){
             target.firstElementChild.classList.toggle("no-display");
         }
         if(target.classList.contains("main-circle")){
-            target.classList.toggle("main-circle");
+            target.style.borderRadius = "3px";
+            target.style.height = "initial";
+            target.style.width = "100%";
+            target.style.display = "block";
+            target.style.flexDirection = "column";
+            target.style.justifyContent = "center";
+            target.style.textAlign = "initial";
+            target.style.fontSize = "initial";
+            target.style.transition = "all 0.3s ease";
+            target.classList.remove("main-circle");
         } else {
-            target.classList.toggle("main-circle");
+            target.style.borderRadius = "50%";
+            target.style.height = "70px";
+            target.style.width = "70px";
+            target.style.display = "flex";
+            target.style.flexDirection = "column";
+            target.style.justifyContent = "center";
+            target.style.textAlign = "center";
+            target.style.fontSize = "2rem";
+            target.style.transition = "all 0.3s ease";
+            target.classList.add("main-circle");
         }
     }
         console.log("I am running");

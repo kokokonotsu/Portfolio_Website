@@ -62,6 +62,7 @@ var screen = window.matchMedia("(max-width: 425px)");
 matchScreen(screen);
 screen.addListener(matchScreen);
 }
+
 window.addEventListener("load", collapsible());
 window.addEventListener("load", media());
 window.addEventListener("load", makeCircles());
