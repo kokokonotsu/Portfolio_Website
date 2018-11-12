@@ -23,7 +23,7 @@ function makeCircles() {
         console.log("I am running");
     }
     for(n = 0; n < mainCard.length; n++){
-        let mainFirstChild = mainCard[n].firstElementChild;
+        var mainFirstChild = mainCard[n].firstElementChild;
         mainFirstChild.addEventListener("click", transformCircles);
     }
     for(j = 0; j < sideCard.length; j++){
@@ -80,19 +80,19 @@ function transformCircles(e){
         }
         if(target.classList.contains("main-circle")){
             target.style.borderRadius = "3px";
-            target.style.display = "block";
             function setHeight(){
-            target.style.height = "initial";
+                target.style.height = "initial";
             }
             function setWidth(){
-            target.style.width = "100%";
+                target.style.display = "block";
+                target.style.width = "100%";
             }
             target.style.textAlign = "initial";
             target.style.fontSize = "initial";
             target.style.transition = "all 0.3s ease";
+            setHeight();
+            setWidth();
             target.classList.remove("main-circle");
-            window.setTimeout(console.log("Setting Height Timer"), 2000, setHeight());
-            window.setTimeout(console.log("Setting Width Timer"), 2000, setWidth());
         } else {
             target.style.borderRadius = "50%";
             target.style.height = "70px";
@@ -155,3 +155,4 @@ function transformCircles(e){
     }
 }
 window.addEventListener("load", makeCircles());
+

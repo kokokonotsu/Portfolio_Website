@@ -65,4 +65,3 @@ screen.addListener(matchScreen);
 
 window.addEventListener("load", collapsible());
 window.addEventListener("load", media());
-window.addEventListener("load", makeCircles());
