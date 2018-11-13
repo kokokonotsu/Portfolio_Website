@@ -1,23 +1,29 @@
 /* Root Start */
 :root{
-    --headerColor: #194fa5;
+    --headerColor: transparent;
     --headerH1Color: #e5e5e5;
-    --bodyColor: #e5e5e5;
+    --bodyColor: transparent;
     --footerColor: #333333;
     --navColor: #C6C6C6;
     --navHoverColor: #9C9C9C;
     --navHoverUnderlineColor: #f1f1f1;
     --fontColor: #2c2c2c;
     --cardColor: #a9c8f9;
-    --collapsibleColor: #8ab7ff;
+    --collapsibleColor: #8ab7ff; 
 }
+/* Possible site color:
+--headerColor: #5784cc;
+
+    
+    #afceff
+    #5784cc
+ */
 /* Root End */
 /* Html Start */
 html{
     width: 100%;
     height: 100%;
     color: var(--fontColor);
-    background-color: var(--bodyColor);
     font-size: 16px;
     font-family: "Open Sans", cursive;
 }
@@ -27,8 +33,9 @@ body{
     display: block;
     box-sizing: border-box;
     margin: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("assets/Hello-World-Background-Image.jpg");
 }
 /* Body End */
 /* Header Start */
